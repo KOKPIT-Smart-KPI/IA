@@ -1,0 +1,111 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - bonjour
+    - salut
+    - bonsoir
+    - coucou
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - au revoir
+    - à bientôt
+    - à plus tard
+    - bonne journée
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - oui
+    - bien sûr
+    - en effet
+    - correct
+    - exactement
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - non
+    - jamais
+    - je ne pense pas
+    - je ne crois pas
+    - pas du tout
+
+- intent: mood_great
+  examples: |
+    - parfait
+    - très bien
+    - super
+    - génial
+    - incroyable
+    - je me sens bien
+    - je vais bien
+
+- intent: mood_unhappy
+  examples: |
+    - triste
+    - très triste
+    - malheureux
+    - mal
+    - très mal
+    - terrible
+    - pas très bien
+    - extrêmement triste
+
+- intent: bot_challenge
+  examples: |
+    - es-tu un bot?
+    - es-tu un humain?
+    - est-ce que je parle à un bot?
+    - est-ce que je parle à un humain?
+    - qui es-tu?
+    - qu'est-ce que tu es?
+
+- intent: ask_emissions_co2
+  examples: |
+    - Quel a été notre niveau d'émissions de CO₂ au cours du dernier trimestre?
+    - Combien de CO₂ avons-nous émis ce mois-ci?
+    - Quelles sont nos émissions carbone cette année?
+    - Quel est le bilan carbone pour 2023?
+    - Combien de tonnes de CO₂ avons-nous émis au Q2?
+    - Quelle est notre empreinte carbone par rapport à l'année dernière?
+    - Montre-moi les émissions de CO₂ du dernier trimestre
+    - Donne-moi les chiffres d'émissions carbone pour cette année
+
+- intent: ask_parite
+  examples: |
+    - Quel est le taux de parité hommes-femmes par département?
+    - Quelle est la proportion de femmes dans l'équipe R&D?
+    - Combien de femmes travaillent au marketing par rapport aux hommes?
+    - Quel est le pourcentage de parité en finance?
+    - Montre-moi les statistiques de parité pour la production
+    - Quelle est la répartition hommes-femmes au service client?
+    - Quel est le ratio de genre dans l'équipe technique?
+    - Donne-moi les chiffres de parité globale dans l'entreprise
+
+- intent: ask_formation_rse
+  examples: |
+    - Combien d'heures de formation RSE ont été suivies ce mois-ci?
+    - Quel est le total des formations ESG pour le premier trimestre?
+    - Combien de formations développement durable avons-nous fait cette année?
+    - Quel était le nombre d'heures de formation RSE en 2023?
+    - Donne-moi les statistiques de formation ESG pour le mois dernier
+    - Combien d'employés ont suivi une formation RSE récemment?
+    - Quelles sont les heures de formation développement durable ce trimestre?
+
+- intent: ask_score_fournisseurs
+  examples: |
+    - Quels fournisseurs ont un score ESG faible cette année?
+    - Montre-moi les f
+
+
+Maintenant, créons un composant pour notre interface utilisateur qui affichera les données ESG scrapées:

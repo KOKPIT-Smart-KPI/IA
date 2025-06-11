@@ -1,0 +1,78 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_emissions_co2
+  - ask_parite
+  - ask_formation_rse
+  - ask_score_fournisseurs
+  - ask_compare_empreinte_carbone
+  - ask_company_esg_rating
+  - ask_compare_companies_esg
+
+entities:
+  - periode
+  - departement
+  - pays
+  - company
+
+slots:
+  periode:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: periode
+  departement:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: departement
+  pays:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: pays
+  company:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: company
+
+responses:
+  utter_greet:
+  - text: "Bonjour ! Je suis votre assistant ESG. Comment puis-je vous aider aujourd'hui ?"
+
+  utter_cheer_up:
+  - text: "Voici quelque chose pour vous remonter le moral:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Est-ce que cela vous a aidé ?"
+
+  utter_happy:
+  - text: "Super, continuons !"
+
+  utter_goodbye:
+  - text: "Au revoir ! N'hésitez pas à revenir si vous avez d'autres questions sur les performances ESG."
+
+  utter_iamabot:
+  - text: "Je suis un assistant conversationnel spécialisé dans les questions ESG (Environnement, Social et Gouvernance)."
+
+actions:
+  - action_get_emissions_co2
+  - action_get_parite
+  - action_get_formation_rse
+  - action_get_score_fournisseurs
+  - action_compare_empreinte_carbone
+  - action_get_company_esg_rating
+  - action_compare_companies_esg
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
